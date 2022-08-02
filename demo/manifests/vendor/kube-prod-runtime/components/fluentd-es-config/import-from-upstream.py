@@ -31,7 +31,7 @@ DIR = os.path.dirname(__file__)
 
 for fname, content in yaml.safe_load(r.text)['data'].items():
     fname = os.path.join(DIR, fname)
-    print("Saving to " + fname)
+    print(f"Saving to {fname}")
     with open(fname, "w") as f:
         f.write(content)
         f.write("\n")  # Add trailing newline
